@@ -10,29 +10,37 @@
 <body>
   <header class="header">
       <div class="container">
-          <div class="header__inner">
-              <a class="logo" href="#">
+          <div id="header__nav" class="header__inner">
+            <div data-menuanchor="top">
+              <a class="logo" href="#top">
                   <picture class="logo__img">
-                    <source srcset="logo-mobile.png" media="(max-width: 600px)">
+                    <source srcset="images/logo-mobile.png" media="(max-width: 600px)">
                       <img src="images/logo.png" alt="logo">
                   </picture>
               </a>
+            </div>
               <nav class="menu">
+                <button class="menu__btn">
+                  <span class="menu__btn-line"></span>
+                </button>
                   <ul class="menu__list">
-                    <li>
-                        <a href="#">О ДРОНЕ</a>
+                    <li class="menu__list-item" data-menuanchor="products">
+                        <a class="menu__list-link" href="#products">О ДРОНЕ</a>
                     </li>
-                    <li>
-                      <a href="#">ПРЕИМУЩЕСТВА</a>
+                    <li class="menu__list-item" data-menuanchor="benefits">
+                      <a class="menu__list-link" href="#benefits">ПРЕИМУЩЕСТВА</a>
                     </li>
-                    <li>
-                      <a href="#">ХАРАКТЕРИСТИКИ</a>
+                    <li class="menu__list-item" data-menuanchor="specification">
+                      <a class="menu__list-link" href="#specification">ХАРАКТЕРИСТИКИ</a>
                     </li>
-                    <li>
-                      <a href="#">ВОПРОСЫ</a>
+                    <li class="menu__list-item" data-menuanchor="questions">
+                      <a class="menu__list-link" href="#questions">ВОПРОСЫ</a>
                     </li>
-                    <li>
-                      <a href="#">КОНТАКТЫ</a>
+                    <li class="menu__list-item" data-menuanchor="contacts">
+                      <a class="menu__list-link" href="#contacts">КОНТАКТЫ</a>
+                    </li>
+                    <li class="menu__list-phone">
+                      <a class="header__phone-menu" href="tel:80505676767">8 (050) 567 67 67</a>
                     </li>
                   </ul>
               </nav>
@@ -43,8 +51,11 @@
           </div>
       </div>
   </header>
+  
+  <main id="fullpage">
 
-  <section class="page-section top">
+  <section data-anchor="top" class="page-section top">
+    <div class="page-section__wrapper top__wrapper">
       <div class="container">
           <div class="top__inner">
               <h1 class="top__title">Mavic 2 Pro</h1>
@@ -72,13 +83,15 @@
           </div>
       </div>
       <div class="scroll__btn">
-          <a href="#">
-            <img src="images/arrow-down" alt="arrow-down">
+          <a href="#products">
+            <img src="images/arrow-down.svg" alt="arrow-down">
           </a>
       </div>
+    </div>
   </section>
 
-  <section class="page-section products">
+  <section data-anchor="products" class="page-section products">
+    <div class="page-section__wrapper">
       <div class="container">
           <h3 class="title products__title">Что такое Mavic 2 Pro?</h3>
           <div class="products__inner">
@@ -95,35 +108,37 @@
                   </p>
                   <div class="products__slider">
                       <div class="products__slider-item">
-                        <img class="products__slider-img" src="images/slider-1.png" alt="products__slider-img">
+                        <img class="products__slider-img" src="images/slider-1.jpg" alt="products__slider-img">
                       </div>
                       <div class="products__slider-item">
-                        <img class="products__slider-img" src="images/slider-2.png" alt="products__slider-img">
+                        <img class="products__slider-img" src="images/slider-1.jpg" alt="products__slider-img">
                       </div>
                       <div class="products__slider-item">
-                        <img class="products__slider-img" src="images/slider-3.png" alt="products__slider-img">
+                        <img class="products__slider-img" src="images/slider-1.jpg" alt="products__slider-img">
                       </div>
                       <div class="products__slider-item">
-                        <img class="products__slider-img" src="images/slider-4.png" alt="products__slider-img">
+                        <img class="products__slider-img" src="images/slider-1.jpg" alt="products__slider-img">
                       </div>
                       <div class="products__slider-item">
-                        <img class="products__slider-img" src="images/slider-5.png" alt="products__slider-img">
+                        <img class="products__slider-img" src="images/slider-1.jpg" alt="products__slider-img">
                       </div>
                       <div class="products__slider-item">
-                        <img class="products__slider-img" src="images/slider-6.png" alt="products__slider-img">
+                        <img class="products__slider-img" src="images/slider-1.jpg" alt="products__slider-img">
                       </div>
                   </div>
               </div>
           </div>
       </div>
       <div class="scroll__btn">
-        <a href="#">
-          <img src="images/arrow-down" alt="arrow-down">
+        <a href="#benefits">
+          <img src="images/arrow-down.svg" alt="arrow-down">
         </a>
+    </div>
     </div>
   </section>
 
-  <section class="page-section benefits">
+  <section data-anchor="benefits" class="page-section benefits">
+    <div class="page-section__wrapper">
       <div class="container">
           <h3 class="title benefits__title">Преимущества</h3>
           <div class="benefits__items">
@@ -136,7 +151,7 @@
                 <div class="benefits__info">
                   <h4 class="benefits__info-title">Интеллектуальные
                     режимы</h4>
-                  <p class="benefits__info-text">Mavic 2 унаследовал 6 стандартных режимов интеллектуальной съемки QuickShot:Roket/Dronie/Circle/Helix/Boomerang/Asteroid.</p>
+                  <p class="benefits__info-text">Mavic 2 унаследовал 6 стандартных режимов интеллектуальной съемки QuickShot: Roket/ Dronie/ Circle/ Helix/ Boomerang/ Asteroid.</p>
                 </div>
               </div>
 
@@ -188,52 +203,56 @@
           </div>
       </div>
       <div class="scroll__btn">
-          <a href="#">
-            <img src="images/arrow-down" alt="arrow-down">
+          <a href="#specification">
+            <img src="images/arrow-down.svg" alt="arrow-down">
           </a>
       </div>
+    </div>
   </section>
 
-  <section class="page-section specificalion">
+  <section data-anchor="specification" class="page-section specification">
+    <div class="page-section__wrapper">
       <div class="container">
           <h3 class="title">Характеристики</h3>
-          <div class="specificalion__inner">
-              <div class="specificalion__item">
-                  <div class="specificalion__box">
-                    <h4 class="specificalion__box-title">Dlog-M 10 бит</h4> 
-                    <p class="specificalion__box-text">Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более широким динамическим диапазоном, дающим больше возможностей для цветокоррекции.</p>
+          <div class="specification__inner">
+              <div class="specification__item">
+                  <div class="specification__box specification__box-1">
+                    <h4 class="specification__box-title">Dlog-M 10 бит</h4> 
+                    <p class="specification__box-text">Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более широким динамическим диапазоном, дающим больше возможностей для цветокоррекции.</p>
                   </div>
-                  <div class="specificalion__box">
-                    <h4 class="specificalion__box-title">Камера Hasselblad</h4> 
-                    <p class="specificalion__box-text">Камера Hasselblad L1D-20С 
+                  <div class="specification__box specification__box-2">
+                    <h4 class="specification__box-title">Камера Hasselblad</h4> 
+                    <p class="specification__box-text">Камера Hasselblad L1D-20С 
                       известны эргономичным дизайном 
                       и превосходным качеством изображений. </p>
                   </div>
               </div>
-              <div class="specificalion__item">
+              <div class="specification__item specification__item--center">
                 <img src="images/mavic.png" alt="mavic">
               </div>
-              <div class="specificalion__item">
-                <div class="specificalion__box">
-                  <h4 class="specificalion__box-title">Матрица CMOS 1</h4> 
-                  <p class="specificalion__box-text">Зона активной работы новой 1-дюймовой матрицы CMOS в четыре раза превышает показатели Mavic Pro</p>
+              <div class="specification__item">
+                <div class="specification__box specification__box-3">
+                  <h4 class="specification__box-title">Матрица CMOS 1</h4> 
+                  <p class="specification__box-text">Зона активной работы новой 1-дюймовой матрицы CMOS в четыре раза превышает показатели Mavic Pro</p>
                 </div>
-                <div class="specificalion__box">
-                  <h4 class="specificalion__box-title">Видео HDR</h4> 
-                  <p class="specificalion__box-text">Благодаря поддержке видео 4K HDR 10 бит, Mavic 2 Pro можно подсоединить к совместимому с HLG 4K ТВ и просматривать запись в полном цветовом спектре</p>
+                <div class="specification__box specification__box-4">
+                  <h4 class="specification__box-title">Видео HDR</h4> 
+                  <p class="specification__box-text">Благодаря поддержке видео 4K HDR 10 бит, Mavic 2 Pro можно подсоединить к совместимому с HLG 4K ТВ и просматривать запись в полном цветовом спектре</p>
                 </div>
               </div>
 
           </div>
       </div>
       <div class="scroll__btn">
-        <a href="#">
-          <img src="images/arrow-down" alt="arrow-down">
+        <a href="#questions">
+          <img src="images/arrow-down.svg" alt="arrow-down">
         </a>
+    </div>
     </div>
   </section>
 
-  <section class="page-section questions">
+  <section data-anchor="questions" class="page-section questions">
+    <div class="page-section__wrapper">
       <div class="container">
           <h3 class="title">Остались вопросы?</h3>
           <div class="questions__items">
@@ -241,7 +260,7 @@
                 <h4 class="questions__item-title">Какие отличия между Mavic 2 Pro и Mavic 2 Zoom?</h4>
                 <p class="questions__item-text">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).</p>
               </div>
-              <div class="questions__item">
+              <div class="questions__item questions__item--active">
                 <h4 class="questions__item-title">Чем Mavic 2 лучше Mavic Pro?</h4>
                 <p class="questions__item-text">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).</p>
               </div>
@@ -256,13 +275,15 @@
           </div>
       </div>
       <div class="scroll__btn">
-          <a href="#">
-            <img src="images/arrow-down" alt="arrow-down">
+          <a href="#contacts">
+            <img src="images/arrow-down.svg" alt="arrow-down">
           </a>
       </div>
+    </div>
   </section>
 
-  <section class="page-section contacts">
+  <section data-anchor="contacts" class="page-section contacts">
+    <div class="page-section__wrapper">
       <div class="container">
           <h3 class="title">Контакты</h3>
           <div class="contacts__inner">
@@ -292,7 +313,7 @@
                     <input class="contacts__form-input" type="email" placeholder="Ваше e-mail">  
                   </div>
                   <textarea class="contacts__form-textarea" placeholder="Что вас интересует?"></textarea>
-                  <button type="submit">ОТПРАВИТЬ</button>
+                  <button class="contacts__form-btn" type="submit">ОТПРАВИТЬ</button>
                 </form>
               </div>
               <ul class="contacts__social-list">
@@ -312,20 +333,16 @@
                   </a>
                 </li>
               </ul>
-
           </div>
+          <footer class="footer">
+            <div class="container">
+              <div class="footer__copy">© DJI, 2020</div>
+            </div>
+          </footer>
       </div>
-      <div class="scroll__btn">
-          <a href="#">
-            <img src="images/arrow-down" alt="arrow-down">
-          </a>
-      </div>
-  </section>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__copy">© DJI, 2020</div>
     </div>
-  </footer>
+  </section>
+</main>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
